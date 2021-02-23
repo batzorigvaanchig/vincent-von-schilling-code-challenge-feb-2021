@@ -1,0 +1,83 @@
+
+
+/*body part*/
+
+
+/*bellow i copied form the last website*/
+
+.container
+{
+    display: grid;
+    height: calc(100vh - 80px);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 0.5rem;
+    grid-template-areas: 
+    "Intro Picture";
+}
+
+.Intro
+{
+    grid-area: Intro;
+    padding: 10% 5%;
+}
+
+.Intro .Title
+{
+    font-size: 2rem;
+    padding: 1rem;
+    margin-bottom: 5%;
+    border-bottom: 5px solid white;
+}
+
+.Intro .Title h1{
+    color: white;
+    width: 80%;
+}
+
+.Intro .Note
+{
+    padding: 1rem;
+    font-size: 1.3rem;
+}
+
+.Intro .Note p
+{
+    color: white;
+    word-spacing: 3px;
+    line-height: 2rem;
+    margin-bottom: 5%;
+}
+
+
+.picture
+{
+    position: relative;
+    grid-area: Picture;
+    justify-content: center;
+    align-items: center;
+    padding: 10%;
+}
+.picture img
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 1000px)
+{
+    /*for body part*/
+    .container
+    {
+        display: grid;
+        height: calc(100vh - 80px);
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 0.5rem;
+        grid-template-areas: 
+        "Picture"
+        "Intro";
+    }
+}
+

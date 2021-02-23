@@ -1,0 +1,283 @@
+.container
+{
+    height: 80%;
+    width: 90%;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 10px 10px 68px -6px rgba(0,0,0,0.5);
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 0.2fr 1fr 1fr;
+    grid-template-areas: 
+    "head head"
+    "user-pic detail"
+    "basic detail";
+    justify-content: space-between;
+    border-radius: 10px;
+}
+.user-name
+{
+    box-sizing: border-box;
+    background-color:#3498db;
+    border-radius: 10px 10px 0px 0px;
+    grid-area: head;
+    text-align: center;
+}
+.user-name h1
+{
+    position: relative;
+    color:  white;
+    margin: 5px;
+}
+.profile-pic
+{
+    position: relative;
+    background-color: white;
+    grid-area: user-pic;
+    padding: 0px 25%;
+}
+.profile-pic img
+{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+}
+.basic
+{
+    background-color: white;
+    border-radius: 0px 0px 10px 10px;
+    grid-area: basic;
+    padding: 5%;
+}
+.basic span
+{
+    font-size: 11px;
+}
+.basic .data
+{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 3px 0;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.detail
+{
+    border-radius: 0px 0px 10px 10px;
+    background-color: #e6e6e6;
+    grid-area: detail;
+    padding: 5% 10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1;
+    grid-template-areas: 
+    "detailInfo detailAddress";
+    justify-content: space-between;
+
+}
+.detail h1
+{
+    color: #3498db;
+    margin-bottom: 5px;
+}
+.detail hr{
+    color: #3498db;
+    border-style: dashed;
+    margin-bottom: 5px;
+}
+.detail span
+{
+    font-size: 15px;
+    font-weight: bold;
+}
+.detail .basic .basicDetail
+{
+    grid-area: detailInfo;
+}
+.detail .basic .Location
+{
+    grid-area: detailAddress;
+}
+.detail .data
+{
+    width: 80%;
+    justify-content: center;
+    padding: 5px 20px;
+    margin: 3px 0;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.detail button
+{
+    width: 80%;
+  background-color:#3498db;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+@media(max-width: 800px)
+{
+    .container
+    {
+        position: absolute;
+        top: 115%;
+        height: 200%;
+        width: 90%;
+        margin-bottom: 5%;
+        transform: translate(-50%,-50%);
+        box-shadow: 10px 10px 68px -6px rgba(0,0,0,0.5);
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2fr 1fr 1fr 2fr;
+        grid-template-areas: 
+        "head"
+        "user-pic"
+        "basic"
+        "detail";
+
+    }
+    .detail
+    {
+        border-radius: 10px 10px 10px 10px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "detailInfo" 
+        "detailAddress";
+        justify-content: space-between;
+
+    }
+}
+
+
+
+/*css file for changing location*/
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+/* Set a style for all buttons */
+button {
+  background-color: #3498db;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  /* cursor: pointer; */
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+.containerLoc {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+/*End of changing location*/

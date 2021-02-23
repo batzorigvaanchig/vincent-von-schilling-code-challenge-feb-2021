@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Employee Profile</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/Base.css">
+        <link rel="stylesheet" href="../css/profile.css">
+        <!--Java scrip for changing user location-->
+        <script src="../Js/NewLocation.js"></script>
+        <!--a java script class provided by w3school which allow us to use free icons-->
+        <script src="https://kit.fontawesome.com/463034f155.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <label class="logo">MediaBazaar</label>
+            <ul>
+                <li><a href="../index.html">Home <i class="fas fa-home"></i></a></li>
+                <li><a href="login.html">Login <i class="fas fa-sign-in-alt"></i></a></li>
+                <li><a class="active" href="EmployeeProfile.html">Profile <i class="fas fa-user-circle"></i></a></li>
+                <li><a href="EditProfie.html">Edit <i class="fas fa-user-edit"></i></a></li>
+                <li><a href="schedule.html">Schedule <i class="fas fa-calendar-alt"></i></a></li>
+            </ul>
+        </nav>
+
+        <div class="container">
+            <div class="user-name">
+                <h1>Welcome Biruk, we are happy to see you again.</h1>
+            </div>
+            <div class="profile-pic">
+                <img src="../assets/profile2.png">
+            </div>
+            <div class="basic">
+                <span>Id</span>
+                <div>02119</div>
+                <span>Full Name</span>
+                <div>Biruk Endris</div>
+                <span>Date of Birth</span>
+                <div>21/21/21</div>
+                <span>Email</span>
+                <diV>biruketblem@gmail.com</div>
+            </div>
+            <div class="detail">
+                <div class="basicDetail">
+                    <h1>Detail information</h1>
+                    <hr>
+                    <span>Username :</span><br>
+                    <div class="data">username@email.com</div><br>
+                    <span>Gender :</span><br>
+                    <div class="data">Male</div><br>
+                    <span>Contract :</span><br>
+                    <div class="data">40 - Hours</div><br>
+                    <span>Type :</span><br>
+                    <div class="data">Employee</div><br>
+                    <span>Department :</span><br>
+                    <div class="data">Electronics</div><br>
+                    <span>Hourly Wage :</span><br>
+                    <div class="data">8 EUR/hur</div><br>
+                </div>
+                <div class="Location">
+                    <h1>User Address</h1>
+                    <hr>
+                    <span>Country :</span><br>
+                    <div class="data">Ethiopia</div><br>
+                    <span>Address :</span><br>
+                    <div class="data">Addis Ababa</div><br>
+                    <span>Town :</span><br>
+                    <div class="data">Addis Ketema</div><br>
+                    <span>Zipcode :</span><br>
+                    <div class="data">No Zipcode</div><br>
+                    <button onclick="document.getElementById('editLocation').style.display='block'">Change Address</button>
+                </div>
+
+            </div>
+        </div>
+
+        <!--Form for location-->
+        <div id="editLocation" class="modal">
+  
+            <form class="modal-content animate" action="/action_page.php" method="post">
+              <div class="imgcontainer">
+                <span onclick="document.getElementById('editLocation').style.display='none'" class="close" title="Close Modal">&times;</span>
+              </div>
+              <br>
+              <div class="containerLoc">
+
+                <h1>New Address?</h1><br>
+                <p>Please fill in this form to change the address.</p>
+                <br>
+                <hr>
+                <label for="address"><b>Address</b></label><br>
+                <input type="text" placeholder="Enter your address" name="address" required><br>
+
+                <label for="town"><b>Town</b></label><br>
+                <input type="text" placeholder="Enter your town" name="town" required><br>
+
+                <label for="zipcode"><b>Zipcode</b></label><br>
+                <input type="text" placeholder="Enter your zipcode" name="zipcode" required><br>
+
+                <label for="country"><b>Country</b></label><br>
+                <input type="text" placeholder="Enter your country" name="country" required><br>
+                  
+                <button type="submit">Update Location</button>
+                <label>
+              </div>
+            </form>
+        </div>
+          
+        <script>
+            // Get the modal
+            var modal = document.getElementById('editLocation');
+            
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+              if (event.target == modal) {
+                modal.style.display = "none";
+              }
+            }
+        </script>
+        
+        <!--End of location code-->
+    </body>
+</html>

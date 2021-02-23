@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Employee Schedule</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/schedule.css">
+        <link rel="stylesheet" href="../css/Base.css">
+        <!--a java script class provided by w3school which allow us to use free icons-->
+        <script src="https://kit.fontawesome.com/463034f155.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <label class="logo">MediaBazaar</label>
+            <ul>
+                <li><a href="../index.html">Home <i class="fas fa-home"></i></a></li>
+                <li><a href="login.html">Login <i class="fas fa-sign-in-alt"></i></a></li>
+                <li><a href="EmployeeProfile.html">Profile <i class="fas fa-user-circle"></i></a></li>
+                <li><a href="EditProfie.html">Edit <i class="fas fa-user-edit"></i></a></li>
+                <li><a class="active" href="schedule.html">Schedule <i class="fas fa-calendar-alt"></i></a></li>
+            </ul>
+        </nav>
+
+        <div class="container">
+            <div class="shifts">
+                <h1>Upcoming Shift</h1>
+                <hr>
+                <div class="shift">
+                    <p><span><i class="fas fa-hourglass-half"></i> Morning</span> <span class="date"><i class="fas fa-calendar-day"></i> 2020/10/02</span></p>
+                </div>
+                <div class="shift">
+                    <p><span><i class="fas fa-hourglass-half"></i> Morning</span> <span class="date"><i class="fas fa-calendar-day"></i> 2020/10/02</span></p>
+                </div>
+                <div class="shift">
+                    <p><span><i class="fas fa-hourglass-half"></i> Morning</span> <span class="date"><i class="fas fa-calendar-day"></i> 2020/10/02</span></p>
+                </div>
+                <div class="shift">
+                    <p><span><i class="fas fa-hourglass-half"></i> Morning</span> <span class="date"><i class="fas fa-calendar-day"></i> 2020/10/02</span></p>
+                </div>
+            </div>
+
+            <div class="schedule-preference">
+                <div class="DateTimePicker">
+                    <h2>Change your preference</h2>
+                    <div class="DateToChoose">
+                        <form action="#">
+                            <!-- <div>
+                                <input type="checkbox" id="monday" name="Day" value="monday" onclick="return DateLimit()">
+                                <label for="monday"> Monday</label><br>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="tuesday" name="Day" value="tuesday" onclick="return DateLimit()">
+                                <label for="tuesday"> Thesday</label><br>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="wednesday" name="Day" value="wednesday" onclick="return DateLimit()">
+                                <label for="wednesday"> Wednesday</label><br>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="thursday" name="Day" value="thursday" onclick="return DateLimit()">
+                                <label for="thursday"> Thursday</label><br>
+                            </div>
+                            
+                            <div>
+                                <input type="checkbox" id="friday" name="Day" value="Friday" onclick="return DateLimit()">
+                                <label for="friday"> Friday</label><br>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="saturday" name="Day" value="Saturday" onclick="return DateLimit()">
+                                <label for="saturday"> Saturday</label><br>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="sunday" name="Day" value="sunday" onclick="return DateLimit()">
+                                <label for="sunday"> Sunday</label><br>
+                            </div> -->
+
+                            <div class="dayoff">
+                                <label for="day-off">Day off:</label>
+                                <input type="date" id="day-off" name="birthday">
+                                <input type="date" id="day-off" name="birthday">
+                            </div>
+                            <hr>
+                            <h3>Would you like to work evening shifts</h3>
+                            <hr>
+                            <div>
+                            <input type="radio" id="male" name="eveningShift" value="male">
+                            <label for="male">Male</label></div>
+                            <div>
+                            <input type="radio" id="female" name="eveningShift" value="female">
+                            <label for="female">Female</label></div>
+                            <input type="submit" value="Submit">
+                          </form>
+                          <script type="text/javascript">
+                            function DateLimit()
+                            {
+                              var a = document.getElementsByName('Day');
+                              var newvar = 0;
+                              var count;
+                              for(count = 0; count < a.length;count++)
+                              {
+                                if(a[count].checked == true)
+                                {
+                                  newvar = newvar + 1;
+                                }
+                              }
+                              if(newvar > 2)
+                              {
+                                alert("you can not add more than 2 days");
+                                return false;
+                              }
+                            }
+                          </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
